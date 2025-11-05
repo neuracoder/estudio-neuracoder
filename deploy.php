@@ -55,12 +55,24 @@ if (isset($data['ref']) && $data['ref'] === 'refs/heads/main') {
     $output = [];
     $returnCode = 0;
 
-    exec('cd /home/u777479293/domains/neuracoder.com/public_html && git pull origin main 2>&1', $output, $returnCode);
+    // Cambiar al directorio correcto
+    $dir = '/home/u777479293/domains/neuracoder.com/public_html';
+    $cmd = "cd $dir && git pull origin main 2>&1";
+
+    writeLog("Executing command: $cmd");
+    exec($cmd, $output, $returnCode);
 
     // Log del resultado
     $outputStr = implode("\n", $output);
     writeLog("Git pull output:\n$outputStr");
     writeLog("Return code: $returnCode");
+
+    // Si exec no funciona, intentar con shell_exec
+    if (empty($output)) {
+        writeLog("exec() returned empty, trying shell_exec...");
+        $shellOutput = shell_exec($cmd);
+        writeLog("shell_exec output: " . ($shellOutput ?: "empty"));
+    }
 
     if ($returnCode === 0) {
         http_response_code(200);
