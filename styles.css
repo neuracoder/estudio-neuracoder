@@ -338,8 +338,10 @@ section {
 /* Products Section */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   gap: var(--spacing-lg);
+  max-width: 900px; /* Limitar ancho para mejor proporción */
+  margin: 0 auto;
 }
 
 .product-card {
