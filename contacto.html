@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Neuracoder</title>
+    <meta name="description" content="¿Tienes un desafío interesante? Contáctanos y evaluemos si es el proyecto perfecto para ambos.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Neuracoder</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="contacto.html" class="nav-link active">Contacto</a>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-contact">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">¿Tienes un Desafío Interesante?</h1>
+                <p class="hero-subtitle">Contáctanos y evaluemos si es el proyecto perfecto para ambos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2>Cuéntanos sobre tu Proyecto</h2>
+                        <p>Completa el formulario y te responderemos en menos de 24 horas</p>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                <span class="error-message" id="nombre-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa">Empresa *</label>
+                                <input type="text" id="empresa" name="empresa" required>
+                                <span class="error-message" id="empresa-error"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Corporativo *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-proyecto">Tipo de Proyecto *</label>
+                            <select id="tipo-proyecto" name="tipo-proyecto" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="saas">Producto SaaS</option>
+                                <option value="microservicios">Arquitectura de Microservicios</option>
+                                <option value="desarrollo-medida">Desarrollo a Medida</option>
+                                <option value="integraciones">Integraciones Complejas</option>
+                                <option value="modernizacion">Modernización de Sistemas</option>
+                                <option value="consultoria">Consultoría Técnica</option>
+                            </select>
+                            <span class="error-message" id="tipo-proyecto-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="presupuesto">Rango de Presupuesto *</label>
+                            <select id="presupuesto" name="presupuesto" required>
+                                <option value="">Selecciona un rango</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="100k-250k">$100,000 - $250,000</option>
+                                <option value="250k-500k">$250,000 - $500,000</option>
+                                <option value="500k+">$500,000+</option>
+                            </select>
+                            <span class="error-message" id="presupuesto-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Describe tu proyecto y por qué es desafiante *</label>
+                            <textarea id="descripcion" name="descripcion" rows="6" placeholder="Cuéntanos sobre los desafíos técnicos, objetivos de negocio y por qué consideras que este proyecto requiere un enfoque especializado..." required></textarea>
+                            <span class="error-message" id="descripcion-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Propuesta</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Información de Contacto</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@neuracoder.com">info@neuracoder.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🌐</div>
+                            <div>
+                                <h4>Sitio Web</h4>
+                                <a href="https://www.neuracoder.com">www.neuracoder.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">⏱️</div>
+                            <div>
+                                <h4>Tiempo de Respuesta</h4>
+                                <p>Menos de 24 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="evaluation-process">
+                        <h3>Proceso de Evaluación</h3>
+                        <div class="process-item">
+                            <div class="process-number">1</div>
+                            <div>
+                                <h4>Evaluamos tu proyecto</h4>
+                                <p>Analizamos la complejidad técnica y alineación con nuestra filosofía</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <div class="process-number">2</div>
+                            <div>
+                                <h4>Propuesta personalizada</h4>
+                                <p>Creamos una propuesta técnica detallada y timeline realista</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <div class="process-number">3</div>
+                            <div>
+                                <h4>Desarrollo de excelencia</h4>
+                                <p>Ejecutamos con metodología ágil y entregas de alta calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h3>Neuracoder</h3>
+                        <p>Desarrollamos soluciones que transforman empresas. Elegimos desafíos que nos motivan a crecer y crear productos excepcionales.</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Productos SaaS</a></li>
+                        <li><a href="#">Microservicios</a></li>
+                        <li><a href="#">Desarrollo a Medida</a></li>
+                        <li><a href="#">Consultoría Técnica</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:info@neuracoder.com">info@neuracoder.com</a></li>
+                        <li><a href="https://www.neuracoder.com">www.neuracoder.com</a></li>
+                    </ul>
+                    <div class="language-toggle footer-lang">
+                        <button class="lang-btn active" data-lang="es">ES</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neuracoder. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

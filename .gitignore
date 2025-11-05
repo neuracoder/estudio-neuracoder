@@ -1,0 +1,30 @@
+# Deploy logs
+deploy.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+backup_old_site/
+
+# Environment files (si usas variables de entorno)
+.env
+.env.local
+
+# Node modules (si usas Node.js en el futuro)
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
