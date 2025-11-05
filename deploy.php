@@ -55,7 +55,7 @@ if (isset($data['ref']) && $data['ref'] === 'refs/heads/main') {
     $output = [];
     $returnCode = 0;
 
-    exec('cd /home/u777479293/public_html && git pull origin main 2>&1', $output, $returnCode);
+    exec('cd /home/u777479293/domains/neuracoder.com/public_html && git pull origin main 2>&1', $output, $returnCode);
 
     // Log del resultado
     $outputStr = implode("\n", $output);
