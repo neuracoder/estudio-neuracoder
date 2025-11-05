@@ -961,3 +961,61 @@ textarea:focus {
     page-break-after: avoid;
   }
 }
+
+/* Hero Stats */
+.hero-stats {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--accent-gold);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--bg-white);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .stat-item {
+    width: 100%;
+    justify-content: center;
+  }
+}

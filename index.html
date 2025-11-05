@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -39,11 +40,37 @@
         <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Neuracoder: Desarrollamos Soluciones que Transforman Empresas</h1>
-                <p class="hero-subtitle">Elegimos desafíos que nos motivan a crecer. Creamos productos SaaS y desarrollos a medida para empresas que buscan la excelencia.</p>
+                <h1 class="hero-title">Desarrollo y Consultoría IT para Sistemas Confiables</h1>
+                <p class="hero-subtitle">Resuelvo problemas técnicos complejos con 20+ años de experiencia en sistemas críticos. Automatización, desarrollo full-stack, y modernización de sistemas legacy.</p>
+
+                <!-- Nueva sección de stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i data-lucide="award" class="stat-icon"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Años de Experiencia</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i data-lucide="shield-check" class="stat-icon"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime Sistemas Críticos</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i data-lucide="check-circle" class="stat-icon"></i>
+                        <div class="stat-content">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Proyectos Entregados</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="hero-cta">
-                    <a href="#productos" class="btn btn-primary">Ver Nuestros Productos</a>
-                    <a href="contacto.html" class="btn btn-secondary">Contactar</a>
+                    <a href="contacto.html" class="btn btn-primary">Agendar Consulta Gratis</a>
+                    <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
                 </div>
             </div>
         </div>
@@ -257,6 +284,8 @@
 document.querySelector('[data-lang="es"]').classList.add('active');
 document.querySelector('[data-lang="en"]').classList.remove('active');
 </script>
-    
+    <script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
