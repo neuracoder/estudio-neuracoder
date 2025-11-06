@@ -40,8 +40,8 @@
         <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Do You Have an Interesting Challenge?</h1>
-                <p class="hero-subtitle">Contact us and let's evaluate if it's the perfect project for both of us</p>
+                <h1 class="hero-title">Do You Have a Complex Technical Challenge?</h1>
+                <p class="hero-subtitle">Tell us about your project and receive a detailed proposal in less than 48 hours</p>
             </div>
         </div>
     </section>
@@ -53,7 +53,7 @@
                 <div class="contact-form-container">
                     <div class="form-header">
                         <h2>Tell Us About Your Project</h2>
-                        <p>Complete the form and we'll respond in less than 24 hours</p>
+                        <p>Complete the form and we'll respond with a detailed technical proposal in less than 48 hours</p>
                     </div>
                     <form class="contact-form" id="contact-form-en">
                         <div class="form-row">
@@ -83,29 +83,20 @@
                             <label for="project-type">Project Type *</label>
                             <select id="project-type" name="project-type" required>
                                 <option value="">Select an option</option>
-                                <option value="saas">SaaS Product</option>
-                                <option value="microservices">Microservices Architecture</option>
-                                <option value="custom-development">Custom Development</option>
-                                <option value="complex-integrations">Complex Integrations</option>
-                                <option value="system-modernization">System Modernization</option>
-                                <option value="technical-consulting">Technical Consulting</option>
+                                <option value="automation">Process Automation</option>
+                                <option value="mvp">MVP Development</option>
+                                <option value="audit">Legacy System Audit</option>
+                                <option value="api">API Integration</option>
+                                <option value="llm">AI/LLM Integration</option>
+                                <option value="rescue">Rescue Mission (Stalled Project)</option>
+                                <option value="consulting">Technical Consulting</option>
+                                <option value="other">Other (specify in message)</option>
                             </select>
                             <span class="error-message" id="project-type-error"></span>
                         </div>
                         <div class="form-group">
-                            <label for="budget">Budget Range *</label>
-                            <select id="budget" name="budget" required>
-                                <option value="">Select a range</option>
-                                <option value="50k-100k">$50,000 - $100,000</option>
-                                <option value="100k-250k">$100,000 - $250,000</option>
-                                <option value="250k-500k">$250,000 - $500,000</option>
-                                <option value="500k+">$500,000+</option>
-                            </select>
-                            <span class="error-message" id="budget-error"></span>
-                        </div>
-                        <div class="form-group">
                             <label for="description">Describe your project and why it's challenging *</label>
-                            <textarea id="description" name="description" rows="6" placeholder="Tell us about the technical challenges, business objectives, and why you consider this project requires a specialized approach..." required></textarea>
+                            <textarea id="description" name="description" rows="6" placeholder="Describe the technical challenge you need to solve. Include details about: current problem, expected outcome, technologies involved (if you know them), and any important constraints or deadlines..." required></textarea>
                             <span class="error-message" id="description-error"></span>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">Send Proposal</button>
@@ -137,26 +128,33 @@
                         </div>
                     </div>
                     <div class="evaluation-process">
-                        <h3>Evaluation Process</h3>
+                        <h3>Our Process</h3>
                         <div class="process-item">
                             <div class="process-number">1</div>
                             <div>
-                                <h4>We evaluate your project</h4>
-                                <p>We analyze technical complexity and alignment with our philosophy</p>
+                                <h4>Initial analysis</h4>
+                                <p>We review your request in less than 24 hours and contact you for a discovery call</p>
                             </div>
                         </div>
                         <div class="process-item">
                             <div class="process-number">2</div>
                             <div>
-                                <h4>Personalized proposal</h4>
-                                <p>We create a detailed technical proposal and realistic timeline</p>
+                                <h4>Discovery call</h4>
+                                <p>30-45 min call to understand technical context, constraints, and objectives</p>
                             </div>
                         </div>
                         <div class="process-item">
                             <div class="process-number">3</div>
                             <div>
-                                <h4>Excellence development</h4>
-                                <p>We execute with agile methodology and high-quality deliveries</p>
+                                <h4>Technical proposal</h4>
+                                <p>Document with defined scope, proposed architecture, timeline, and fixed price</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <div class="process-number">4</div>
+                            <div>
+                                <h4>Project kickoff</h4>
+                                <p>Once the proposal is approved, we start development</p>
                             </div>
                         </div>
                     </div>

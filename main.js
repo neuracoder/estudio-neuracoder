@@ -102,13 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
         isValid = false
       }
 
-      // Budget validation
-      const presupuesto = document.getElementById("presupuesto")
-      if (!presupuesto.value) {
-        showError("presupuesto", "Selecciona un rango de presupuesto")
-        isValid = false
-      }
-
       // Description validation
       const descripcion = document.getElementById("descripcion")
       if (!descripcion.value.trim()) {
@@ -227,14 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
       case "tipo-proyecto":
         if (!field.value) {
           showError(fieldId, "Selecciona un tipo de proyecto")
-        } else {
-          showSuccess(fieldId)
-        }
-        break
-
-      case "presupuesto":
-        if (!field.value) {
-          showError(fieldId, "Selecciona un rango de presupuesto")
         } else {
           showSuccess(fieldId)
         }

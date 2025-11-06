@@ -102,13 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
         isValid = false
       }
 
-      // Budget validation
-      const budget = document.getElementById("budget")
-      if (!budget.value) {
-        showError("budget", "Select a budget range")
-        isValid = false
-      }
-
       // Description validation
       const description = document.getElementById("description")
       if (!description.value.trim()) {
@@ -227,14 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
       case "project-type":
         if (!field.value) {
           showError(fieldId, "Select a project type")
-        } else {
-          showSuccess(fieldId)
-        }
-        break
-
-      case "budget":
-        if (!field.value) {
-          showError(fieldId, "Select a budget range")
         } else {
           showSuccess(fieldId)
         }

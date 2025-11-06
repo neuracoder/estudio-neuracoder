@@ -40,8 +40,8 @@
         <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">¿Tienes un Desafío Interesante?</h1>
-                <p class="hero-subtitle">Contáctanos y evaluemos si es el proyecto perfecto para ambos</p>
+                <h1 class="hero-title">¿Tienes un Desafío Técnico Complejo?</h1>
+                <p class="hero-subtitle">Contanos sobre tu proyecto y recibí una propuesta detallada en menos de 48 horas</p>
             </div>
         </div>
     </section>
@@ -53,7 +53,7 @@
                 <div class="contact-form-container">
                     <div class="form-header">
                         <h2>Cuéntanos sobre tu Proyecto</h2>
-                        <p>Completa el formulario y te responderemos en menos de 24 horas</p>
+                        <p>Completá el formulario y te responderemos con una propuesta técnica detallada en menos de 48 horas</p>
                     </div>
                     <form class="contact-form" id="contact-form">
                         <div class="form-row">
@@ -83,29 +83,20 @@
                             <label for="tipo-proyecto">Tipo de Proyecto *</label>
                             <select id="tipo-proyecto" name="tipo-proyecto" required>
                                 <option value="">Selecciona una opción</option>
-                                <option value="saas">Producto SaaS</option>
-                                <option value="microservicios">Arquitectura de Microservicios</option>
-                                <option value="desarrollo-medida">Desarrollo a Medida</option>
-                                <option value="integraciones">Integraciones Complejas</option>
-                                <option value="modernizacion">Modernización de Sistemas</option>
-                                <option value="consultoria">Consultoría Técnica</option>
+                                <option value="automation">Automatización de Procesos</option>
+                                <option value="mvp">Desarrollo de MVP</option>
+                                <option value="audit">Auditoría de Sistema Legacy</option>
+                                <option value="api">Integración de APIs</option>
+                                <option value="llm">Integración de IA/LLMs</option>
+                                <option value="rescue">Rescue Mission (Proyecto Estancado)</option>
+                                <option value="consulting">Consultoría Técnica</option>
+                                <option value="other">Otro (especificar en mensaje)</option>
                             </select>
                             <span class="error-message" id="tipo-proyecto-error"></span>
                         </div>
                         <div class="form-group">
-                            <label for="presupuesto">Rango de Presupuesto *</label>
-                            <select id="presupuesto" name="presupuesto" required>
-                                <option value="">Selecciona un rango</option>
-                                <option value="50k-100k">$50,000 - $100,000</option>
-                                <option value="100k-250k">$100,000 - $250,000</option>
-                                <option value="250k-500k">$250,000 - $500,000</option>
-                                <option value="500k+">$500,000+</option>
-                            </select>
-                            <span class="error-message" id="presupuesto-error"></span>
-                        </div>
-                        <div class="form-group">
                             <label for="descripcion">Describe tu proyecto y por qué es desafiante *</label>
-                            <textarea id="descripcion" name="descripcion" rows="6" placeholder="Cuéntanos sobre los desafíos técnicos, objetivos de negocio y por qué consideras que este proyecto requiere un enfoque especializado..." required></textarea>
+                            <textarea id="descripcion" name="descripcion" rows="6" placeholder="Describí el desafío técnico que necesitás resolver. Incluí detalles sobre: problema actual, resultado esperado, tecnologías involucradas (si las conocés), y cualquier restricción o deadline importante..." required></textarea>
                             <span class="error-message" id="descripcion-error"></span>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">Enviar Propuesta</button>
@@ -137,26 +128,33 @@
                         </div>
                     </div>
                     <div class="evaluation-process">
-                        <h3>Proceso de Evaluación</h3>
+                        <h3>Nuestro Proceso</h3>
                         <div class="process-item">
                             <div class="process-number">1</div>
                             <div>
-                                <h4>Evaluamos tu proyecto</h4>
-                                <p>Analizamos la complejidad técnica y alineación con nuestra filosofía</p>
+                                <h4>Análisis inicial</h4>
+                                <p>Revisamos tu solicitud en menos de 24 horas y te contactamos para una call de discovery</p>
                             </div>
                         </div>
                         <div class="process-item">
                             <div class="process-number">2</div>
                             <div>
-                                <h4>Propuesta personalizada</h4>
-                                <p>Creamos una propuesta técnica detallada y timeline realista</p>
+                                <h4>Discovery call</h4>
+                                <p>Llamada de 30-45 min para entender contexto técnico, restricciones y objetivos</p>
                             </div>
                         </div>
                         <div class="process-item">
                             <div class="process-number">3</div>
                             <div>
-                                <h4>Desarrollo de excelencia</h4>
-                                <p>Ejecutamos con metodología ágil y entregas de alta calidad</p>
+                                <h4>Propuesta técnica</h4>
+                                <p>Documento con alcance definido, arquitectura propuesta, timeline y precio fijo</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <div class="process-number">4</div>
+                            <div>
+                                <h4>Inicio del proyecto</h4>
+                                <p>Una vez aprobada la propuesta, arrancamos con el desarrollo</p>
                             </div>
                         </div>
                     </div>
