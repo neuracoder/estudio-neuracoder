@@ -1124,10 +1124,22 @@ textarea:focus {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-2xl);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .portfolio-item {
