@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Neuracoder</title>
+    <meta name="description" content="Servicios especializados de desarrollo y consultoría IT. Automatización, MVPs, auditorías técnicas y más.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Neuracoder</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="servicios.html" class="nav-link active">Servicios</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-about">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Servicios Especializados</h1>
+                <p class="hero-subtitle">Soluciones técnicas con alcance definido, timeline claro y entrega garantizada</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section class="services-detail">
+        <div class="container">
+
+            <!-- Servicio 1: Python Automation Sprint -->
+            <div class="service-detail-card" id="automation">
+                <div class="service-detail-header">
+                    <i data-lucide="zap" class="service-detail-icon"></i>
+                    <div>
+                        <h2>Python Automation Sprint</h2>
+                        <p class="service-detail-subtitle">Automatizamos procesos manuales en 5-7 días</p>
+                    </div>
+                </div>
+
+                <div class="service-detail-content">
+                    <div class="service-detail-description">
+                        <h3>¿Qué incluye?</h3>
+                        <ul>
+                            <li>Análisis del proceso manual actual</li>
+                            <li>Desarrollo de script/aplicación de automatización</li>
+                            <li>Testing en ambiente del cliente</li>
+                            <li>Documentación básica de uso</li>
+                            <li>1 sesión de capacitación</li>
+                            <li>15 días de soporte post-entrega</li>
+                        </ul>
+
+                        <h3>Casos de uso ideales:</h3>
+                        <ul>
+                            <li>Scraping de datos desde múltiples fuentes</li>
+                            <li>Procesamiento automático de archivos (Excel, CSV, PDFs)</li>
+                            <li>Integración entre sistemas vía APIs</li>
+                            <li>Generación automatizada de reportes</li>
+                            <li>Envío programado de emails/notificaciones</li>
+                        </ul>
+
+                        <h3>Stack técnico:</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">pandas</span>
+                            <span class="tech-badge">Beautiful Soup</span>
+                            <span class="tech-badge">Selenium</span>
+                            <span class="tech-badge">APIs REST</span>
+                        </div>
+
+                        <h3>Entregables:</h3>
+                        <ul>
+                            <li>Código fuente documentado</li>
+                            <li>Scripts ejecutables o mini-app con interfaz</li>
+                            <li>Documentación en Markdown</li>
+                            <li>Guía de deployment</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-detail-sidebar">
+                        <div class="service-highlight">
+                            <h4>Ejemplo real</h4>
+                            <p>"¿Tu equipo pierde 10 horas semanales copiando datos entre sistemas? Automatizamos el proceso completo. Precio fijo, entrega garantizada."</p>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Cotización</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 2: MVP Development -->
+            <div class="service-detail-card" id="mvp">
+                <div class="service-detail-header">
+                    <i data-lucide="rocket" class="service-detail-icon"></i>
+                    <div>
+                        <h2>MVP Development</h2>
+                        <p class="service-detail-subtitle">Desarrollamos tu MVP en 10-15 días con stack gratuito</p>
+                    </div>
+                </div>
+
+                <div class="service-detail-content">
+                    <div class="service-detail-description">
+                        <h3>¿Qué incluye?</h3>
+                        <ul>
+                            <li>Desarrollo full-stack de MVP funcional</li>
+                            <li>Frontend + Backend + Base de datos</li>
+                            <li>Deployment en plataformas gratuitas (Vercel/Netlify/Railway)</li>
+                            <li>Arquitectura escalable para futuro crecimiento</li>
+                            <li>Código documentado y versionado en Git</li>
+                            <li>30 días de soporte post-entrega</li>
+                        </ul>
+
+                        <h3>Casos de uso ideales:</h3>
+                        <ul>
+                            <li>Startups validando idea de negocio</li>
+                            <li>Empresas lanzando producto interno</li>
+                            <li>Emprendedores con presupuesto limitado</li>
+                            <li>Prototipos para mostrar a inversores</li>
+                        </ul>
+
+                        <h3>Stack técnico:</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge">React/Next.js</span>
+                            <span class="tech-badge">Python/FastAPI</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Vercel</span>
+                            <span class="tech-badge">Stripe</span>
+                        </div>
+
+                        <h3>Diferenciador clave:</h3>
+                        <p>No es código "descartable" - desarrollamos con arquitectura pensada para escalar, incluyendo mejores prácticas desde día 1 (testing, logging, error handling).</p>
+                    </div>
+
+                    <div class="service-detail-sidebar">
+                        <div class="service-highlight">
+                            <h4>Ejemplo real</h4>
+                            <p>"Desarrollamos tu MVP en 2 semanas con arquitectura profesional, sin costos de hosting. Lanzás rápido y escalás después."</p>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Cotización</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 3: Legacy System Audit -->
+            <div class="service-detail-card" id="audit">
+                <div class="service-detail-header">
+                    <i data-lucide="search" class="service-detail-icon"></i>
+                    <div>
+                        <h2>Legacy System Audit</h2>
+                        <p class="service-detail-subtitle">Diagnóstico técnico + roadmap en 3-5 días</p>
+                    </div>
+                </div>
+
+                <div class="service-detail-content">
+                    <div class="service-detail-description">
+                        <h3>¿Qué incluye?</h3>
+                        <ul>
+                            <li>Revisión de arquitectura actual</li>
+                            <li>Análisis de código (code review parcial)</li>
+                            <li>Identificación de riesgos técnicos</li>
+                            <li>Documento de recomendaciones priorizadas</li>
+                            <li>Roadmap de modernización (3 opciones: mínimo/medio/completo)</li>
+                            <li>1 sesión de Q&A con stakeholders</li>
+                        </ul>
+
+                        <h3>Casos de uso ideales:</h3>
+                        <ul>
+                            <li>Sistemas viejos que "nadie se anima a tocar"</li>
+                            <li>Código heredado sin documentación</li>
+                            <li>Empresas evaluando si modernizar o reescribir</li>
+                            <li>Due diligence técnico para inversores/compradores</li>
+                        </ul>
+
+                        <h3>Entregables:</h3>
+                        <ul>
+                            <li>PDF con análisis técnico (15-25 páginas)</li>
+                            <li>Matriz de riesgos priorizados</li>
+                            <li>3 escenarios de modernización con costos estimados</li>
+                            <li>Lista de quick-wins implementables de inmediato</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-detail-sidebar">
+                        <div class="service-highlight">
+                            <h4>Ejemplo real</h4>
+                            <p>"¿Tenés un sistema viejo que funciona pero da miedo modificar? Hacemos un diagnóstico técnico real y te decimos exactamente qué hacer."</p>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Cotización</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 4: API Integration -->
+            <div class="service-detail-card" id="api">
+                <div class="service-detail-header">
+                    <i data-lucide="plug" class="service-detail-icon"></i>
+                    <div>
+                        <h2>API Integration & Webhooks</h2>
+                        <p class="service-detail-subtitle">Integraciones robustas en 3-5 días</p>
+                    </div>
+                </div>
+
+                <div class="service-detail-content">
+                    <div class="service-detail-description">
+                        <h3>¿Qué incluye?</h3>
+                        <ul>
+                            <li>Integración con API externa (Stripe, Google, redes sociales, etc.)</li>
+                            <li>Desarrollo de webhooks para eventos en tiempo real</li>
+                            <li>Manejo de autenticación (OAuth, API keys, JWT)</li>
+                            <li>Error handling y retry logic</li>
+                            <li>Documentación de endpoints</li>
+                            <li>Testing básico</li>
+                        </ul>
+
+                        <h3>Casos de uso ideales:</h3>
+                        <ul>
+                            <li>Conectar sistema interno con servicios externos</li>
+                            <li>Sincronización automática entre plataformas</li>
+                            <li>Notificaciones en tiempo real</li>
+                            <li>Integración de pagos online</li>
+                        </ul>
+
+                        <h3>Stack técnico:</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge">REST APIs</span>
+                            <span class="tech-badge">Webhooks</span>
+                            <span class="tech-badge">OAuth 2.0</span>
+                            <span class="tech-badge">JWT</span>
+                            <span class="tech-badge">Postman</span>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-sidebar">
+                        <div class="service-highlight">
+                            <h4>Ejemplo real</h4>
+                            <p>"¿Necesitás que tu sistema hable con Stripe/Google/Mercado Libre? Integramos en 3 días, robusto y documentado."</p>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Cotización</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 5: LLM Integration -->
+            <div class="service-detail-card" id="llm">
+                <div class="service-detail-header">
+                    <i data-lucide="brain" class="service-detail-icon"></i>
+                    <div>
+                        <h2>LLM Integration & AI Features</h2>
+                        <p class="service-detail-subtitle">Agregamos IA a tu producto en 5-10 días</p>
+                    </div>
+                </div>
+
+                <div class="service-detail-content">
+                    <div class="service-detail-description">
+                        <h3>¿Qué incluye?</h3>
+                        <ul>
+                            <li>Integración de OpenAI/Claude/otros LLMs</li>
+                            <li>Desarrollo de prompts optimizados</li>
+                            <li>Sistema de caching para reducir costos</li>
+                            <li>Rate limiting y manejo de cuotas</li>
+                            <li>UI para interacción con modelo</li>
+                            <li>Documentación de uso y costos estimados</li>
+                        </ul>
+
+                        <h3>Casos de uso ideales:</h3>
+                        <ul>
+                            <li>Chatbots para soporte/ventas</li>
+                            <li>Generación automatizada de contenido</li>
+                            <li>Clasificación/análisis de texto a escala</li>
+                            <li>Asistentes internos para empleados</li>
+                        </ul>
+
+                        <h3>Diferenciador clave:</h3>
+                        <p>Experiencia real con LLMs (RecetasPiolas, DreamWise). No es solo "llamar a la API" - desarrollamos arquitectura pensada para producción con manejo de costos y optimización de prompts.</p>
+
+                        <h3>Stack técnico:</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge">OpenAI API</span>
+                            <span class="tech-badge">Claude API</span>
+                            <span class="tech-badge">Prompt Engineering</span>
+                            <span class="tech-badge">Redis Cache</span>
+                            <span class="tech-badge">Token Management</span>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-sidebar">
+                        <div class="service-highlight">
+                            <h4>Ejemplo real</h4>
+                            <p>"Agregá IA a tu producto sin contratar un equipo de ML. Integramos GPT/Claude en tu sistema, listo para producción."</p>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Cotización</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 6: Rescue Mission -->
+            <div class="service-detail-card" id="rescue">
+                <div class="service-detail-header">
+                    <i data-lucide="life-buoy" class="service-detail-icon"></i>
+                    <div>
+                        <h2>Rescue Mission</h2>
+                        <p class="service-detail-subtitle">Destrabamos proyectos estancados</p>
+                    </div>
+                </div>
+
+                <div class="service-detail-content">
+                    <div class="service-detail-description">
+                        <h3>¿Qué incluye?</h3>
+                        <ul>
+                            <li>Análisis de por qué el proyecto está estancado</li>
+                            <li>Identificación de blockers técnicos</li>
+                            <li>Refactoring crítico del código problemático</li>
+                            <li>Solución de bugs complejos</li>
+                            <li>Documentación de arquitectura</li>
+                            <li>Transferencia de conocimiento al equipo</li>
+                        </ul>
+
+                        <h3>Casos de uso ideales:</h3>
+                        <ul>
+                            <li>Proyectos "90% terminados" que nunca se lanzan</li>
+                            <li>Developers anteriores se fueron y nadie entiende el código</li>
+                            <li>Bugs críticos que nadie pudo resolver</li>
+                            <li>Performance inaceptable que necesita optimización</li>
+                        </ul>
+
+                        <h3>Diferenciador total:</h3>
+                        <p>Este servicio ES nuestra experiencia vivida. Empatía real con el problema del cliente. Enfoque forense/debugging de sistemas críticos aplicado a proyectos estancados.</p>
+
+                        <h3>Modalidad de trabajo:</h3>
+                        <ul>
+                            <li>Evaluación inicial (sin cargo): 2-3 horas</li>
+                            <li>Propuesta con alcance y precio fijo</li>
+                            <li>Ejecución con checkpoints frecuentes</li>
+                            <li>Entrega + documentación + knowledge transfer</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-detail-sidebar">
+                        <div class="service-highlight">
+                            <h4>Ejemplo real</h4>
+                            <p>"¿Tu proyecto lleva meses estancado y ya gastaste mucho? Somos especialistas en destrabar lo que otros no pudieron. Fixed price, fixed time."</p>
+                        </div>
+
+                        <div class="service-cta">
+                            <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Cotización</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultoría por Hora -->
+            <div class="service-detail-card" id="consulting">
+                <div class="service-detail-header">
+                    <i data-lucide="clock" class="service-detail-icon"></i>
+                    <div>
+                        <h2>Consultoría por Hora</h2>
+                        <p class="service-detail-subtitle">Soporte técnico continuo y flexible</p>
+                    </div>
+                </div>
+
+                <div class="service-detail-content">
+                    <div class="service-detail-description">
+                        <h3>¿Para qué?</h3>
+                        <ul>
+                            <li>Soporte técnico continuo</li>
+                            <li>Code reviews</li>
+                            <li>Pair programming</li>
+                            <li>Troubleshooting ad-hoc</li>
+                            <li>Consultas de arquitectura</li>
+                        </ul>
+
+                        <h3>Modalidad:</h3>
+                        <ul>
+                            <li>Packs prepagos (10/20/40 horas)</li>
+                            <li>Válidos por 3 meses</li>
+                            <li>Reporting mensual de horas utilizadas</li>
+                        </ul>
+
+                        <h3>Ideal para:</h3>
+                        <ul>
+                            <li>Empresas que necesitan expertise ocasional</li>
+                            <li>Equipos que necesitan mentor técnico</li>
+                            <li>Proyectos con scope incierto</li>
+                            <li>Relación ya establecida con el cliente</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-detail-sidebar">
+                        <div class="service-cta">
+                            <a href="contacto.html" class="btn btn-primary btn-full">Consultar Disponibilidad</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para empezar tu proyecto?</h2>
+                <p>Contanos sobre tu desafío técnico y recibí una propuesta personalizada en menos de 48 horas.</p>
+                <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h3>Neuracoder</h3>
+                        <p>Desarrollamos soluciones que transforman empresas. Elegimos desafíos que nos motivan a crecer y crear productos excepcionales.</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="servicios.html#automation">Python Automation</a></li>
+                        <li><a href="servicios.html#mvp">MVP Development</a></li>
+                        <li><a href="servicios.html#audit">System Audit</a></li>
+                        <li><a href="servicios.html#rescue">Rescue Mission</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:info@neuracoder.com">info@neuracoder.com</a></li>
+                        <li><a href="https://www.neuracoder.com">www.neuracoder.com</a></li>
+                    </ul>
+                    <div class="language-toggle footer-lang">
+                        <button class="lang-btn active" data-lang="es">ES</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neuracoder. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
