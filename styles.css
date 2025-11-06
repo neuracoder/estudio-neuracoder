@@ -1424,3 +1424,22 @@ textarea:focus {
     position: static;
   }
 }
+
+/* About Page Icon Wrapper */
+.about-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #d4af37 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 4px 6px var(--shadow-light);
+}
+
+.about-icon-wrapper i {
+  width: 24px;
+  height: 24px;
+  color: var(--text-dark);
+}
