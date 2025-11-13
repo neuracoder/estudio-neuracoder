@@ -10,6 +10,28 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Animación de latido para botón Diseño Web */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+            }
+        }
+
+        .nav-link-diseno-web {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .nav-link-diseno-web:hover {
+            animation: none;
+            transform: scale(1.08);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -22,7 +44,7 @@
                 <a href="index.html" class="nav-link active">Inicio</a>
                 <a href="nosotros.html" class="nav-link">Nosotros</a>
                 <a href="servicios.html" class="nav-link">Servicios</a>
-                <a href="landings/index.html" class="nav-link" style="background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white; padding: 8px 16px; border-radius: 6px; font-weight: 600;">Diseño Web</a>
+                <a href="landings/index.html" class="nav-link nav-link-diseno-web" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 8px 16px; border-radius: 6px; font-weight: 600; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);">Diseño Web</a>
                 <a href="contacto.html" class="nav-link">Contacto</a>
                 <div class="language-toggle">
                     <button class="lang-btn active" data-lang="es">ES</button>
