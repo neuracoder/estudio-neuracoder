@@ -284,15 +284,22 @@
                     <div class="big-number" id="perdida-anual" style="font-size: 2rem;">$1,080,000</div>
                     <p style="font-size: 1rem; margin-bottom: 30px;">por año</p>
 
-                    <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
-                        <p style="color: var(--text-black); font-weight: 600; margin-bottom: 10px;">
-                            Si desviás solo el 20% de reservas a tu landing:
+                    <p style="color: var(--text-black); font-weight: 600; margin-top: 30px; margin-bottom: 20px;">
+                        Con tu landing propia, captás reservas directas sin comisión.
+                    </p>
+
+                    <div style="background: white; padding: 25px; border-radius: 8px; margin-top: 20px;">
+                        <h4 style="color: var(--text-black); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;">
+                            RECUPERACIÓN DE INVERSIÓN:
+                        </h4>
+                        <p style="color: var(--text-dark); font-size: 1rem; margin-bottom: 8px;">
+                            La landing cuesta <strong style="color: var(--text-black);">$350.000</strong> (una vez)
                         </p>
-                        <p style="color: var(--text-black); font-size: 1.5rem; font-weight: 800;">
-                            Ahorrás <span id="ahorro-20" style="color: var(--success-green);">$216,000</span> al año
+                        <p style="color: var(--text-black); font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">
+                            La recuperás en <span id="meses-recuperacion" style="color: var(--success-green);">3 meses</span> de ahorro
                         </p>
-                        <p style="color: var(--text-dark); font-size: 0.95rem; margin-top: 15px;">
-                            Recuperás tu inversión de $350,000 en <span style="font-weight: 700; color: var(--text-black);" id="meses-recuperacion">2 meses</span> ⚡
+                        <p style="color: var(--text-dark); font-size: 1.1rem; font-weight: 600;">
+                            Después: todo ganancia ⚡
                         </p>
                     </div>
 
@@ -680,19 +687,16 @@
                 unidadesValue.textContent = unidades;
                 reservasValue.textContent = reservas;
 
-                // Cálculos
+                // Cálculo simplificado
                 const perdidaMensual = reservas * precio * (comision / 100);
                 const perdidaAnual = perdidaMensual * 12;
-                const ahorro20 = perdidaAnual * 0.20;
-                const mesesRecuperacion = Math.ceil(350000 / (ahorro20 / 12));
+                const mesesRecuperacion = Math.ceil(350000 / perdidaMensual);
 
                 // Formatear números
                 document.getElementById('perdida-mensual').textContent =
                     '$' + perdidaMensual.toLocaleString('es-AR');
                 document.getElementById('perdida-anual').textContent =
                     '$' + perdidaAnual.toLocaleString('es-AR');
-                document.getElementById('ahorro-20').textContent =
-                    '$' + ahorro20.toLocaleString('es-AR');
                 document.getElementById('meses-recuperacion').textContent =
                     mesesRecuperacion + ' ' + (mesesRecuperacion === 1 ? 'mes' : 'meses');
             }
