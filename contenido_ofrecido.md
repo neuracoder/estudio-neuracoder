@@ -78,11 +78,11 @@
   - Vía email/WhatsApp
 
 ### 7. Timeline
-- ✅ **Entrega en 3-4 semanas** desde aprobación de diseño
-  - Semana 1: Diseño inicial y revisión
-  - Semana 2: Desarrollo y carga de contenido
-  - Semana 3: Pruebas y ajustes
-  - Semana 4: Lanzamiento
+- ✅ **Entrega en 10 días hábiles** desde aprobación de diseño
+  - Días 1-3: Diseño inicial y revisión
+  - Días 4-7: Desarrollo y carga de contenido
+  - Días 8-9: Pruebas y ajustes
+  - Día 10: Lanzamiento
 
 ---
 
@@ -211,7 +211,7 @@ Si después de validar que tu landing funciona querés automatizar completamente
 | **Reservas automatizadas** | ❌ | ✅ |
 | **Mercado Pago integrado** | ❌ | ✅ |
 | **Panel de admin** | ❌ | ✅ |
-| Timeline | 3-4 semanas | 10-12 semanas |
+| Timeline | 10 días hábiles | 10-12 semanas |
 
 ---
 
@@ -223,7 +223,7 @@ Si después de validar que tu landing funciona querés automatizar completamente
 - ✅ Hospedajes con 1-5 unidades (volumen manejable por WhatsApp)
 - ✅ Clientes que quieren validar la demanda antes de invertir más
 - ✅ Presupuesto limitado para empezar
-- ✅ Necesitan estar online rápido (3-4 semanas)
+- ✅ Necesitan estar online rápido (10 días hábiles)
 
 ### Paquete Base + Sistema Reservas ($850,000) - Ideal para:
 - ✅ Hospedajes con 6+ unidades (volumen alto)
@@ -240,7 +240,7 @@ Si después de validar que tu landing funciona querés automatizar completamente
 **Empezá con el paquete base por estas razones:**
 
 1. **Inversión menor** ($350K vs $850K)
-2. **Tiempo de lanzamiento rápido** (3-4 semanas vs 10-12 semanas)
+2. **Tiempo de lanzamiento rápido** (10 días hábiles vs 10-12 semanas)
 3. **Validás la demanda real** antes de invertir más
 4. **La mayoría de los huéspedes consulta antes de reservar** (preferencia del mercado argentino)
 5. **Control total** del proceso de venta
