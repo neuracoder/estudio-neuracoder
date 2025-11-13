@@ -297,18 +297,91 @@
     </section>
 
     <!-- Sección Destacada - Hospedajes -->
-    <section class="hospedajes-cta" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); padding: 60px 0; margin: 60px 0;">
-        <div class="container">
-            <div style="text-align: center; color: white;">
-                <h2 style="color: white; margin-bottom: 20px; font-size: 2.5rem;">¿Tenés un Hospedaje Turístico?</h2>
-                <p style="font-size: 1.25rem; margin-bottom: 30px; opacity: 0.95;">
-                    Dejá de depender 100% de Booking y Airbnb. Capturá consultas directas sin comisiones.
+    <section class="hospedajes-cta" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); padding: 80px 0; margin: 80px 0; position: relative; overflow: hidden;">
+        <!-- Efecto de fondo animado -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); opacity: 0.4;"></div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="text-align: center; color: white; max-width: 900px; margin: 0 auto;">
+                <!-- Badge superior -->
+                <div style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 8px 24px; border-radius: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.3);">
+                    <span style="font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px;">🏠 NUEVO SERVICIO ESPECIALIZADO</span>
+                </div>
+
+                <h2 style="color: white; margin-bottom: 20px; font-size: 3rem; font-weight: 800; line-height: 1.2; text-shadow: 0 2px 20px rgba(0,0,0,0.2);">
+                    ¿Tenés un Hospedaje Turístico?
+                </h2>
+                <p style="font-size: 1.4rem; margin-bottom: 20px; opacity: 0.95; line-height: 1.6;">
+                    Dejá de depender 100% de Booking y Airbnb.<br>
+                    <strong style="color: #fbbf24;">Capturá consultas directas sin comisiones.</strong>
                 </p>
-                <a href="landings/index.html" class="btn" style="background: white; color: #0ea5e9; font-weight: 700; font-size: 1.2rem; padding: 18px 40px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    Ver Solución para Hospedajes →
+
+                <!-- Estadísticas rápidas -->
+                <div style="display: flex; justify-content: center; gap: 30px; margin: 30px 0; flex-wrap: wrap;">
+                    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 15px 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="font-size: 2rem; font-weight: 800; color: #fbbf24;">0%</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Comisiones</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 15px 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="font-size: 2rem; font-weight: 800; color: #fbbf24;">3-4</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Semanas online</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 15px 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="font-size: 2rem; font-weight: 800; color: #fbbf24;">$350K</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Inversión única</div>
+                    </div>
+                </div>
+
+                <!-- Botón principal mejorado -->
+                <a href="landings/index.html" class="btn-hospedajes-cta" style="display: inline-block; background: white; color: #0ea5e9; font-weight: 800; font-size: 1.3rem; padding: 22px 50px; border-radius: 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                    <span style="position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; justify-content: center;">
+                        <span>Ver Solución Completa</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
                 </a>
+
+                <p style="margin-top: 25px; font-size: 0.95rem; opacity: 0.85;">
+                    ✓ Calculadora de ROI incluida &nbsp;•&nbsp; ✓ Sin compromiso &nbsp;•&nbsp; ✓ Respuesta en 24hs
+                </p>
             </div>
         </div>
+
+        <style>
+            .btn-hospedajes-cta:hover {
+                transform: translateY(-3px) scale(1.02);
+                box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+            }
+            .btn-hospedajes-cta:hover svg {
+                transform: translateX(5px);
+            }
+            .btn-hospedajes-cta::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.2), transparent);
+                transition: left 0.5s ease;
+            }
+            .btn-hospedajes-cta:hover::before {
+                left: 100%;
+            }
+            @media (max-width: 768px) {
+                .hospedajes-cta h2 {
+                    font-size: 2rem !important;
+                }
+                .hospedajes-cta p {
+                    font-size: 1.1rem !important;
+                }
+                .btn-hospedajes-cta {
+                    font-size: 1.1rem !important;
+                    padding: 18px 35px !important;
+                }
+            }
+        </style>
     </section>
 
     <!-- Testimonials Section -->
