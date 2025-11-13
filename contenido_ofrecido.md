@@ -4,7 +4,7 @@
 **Versión:** 1.0
 **Fecha:** 2025-11-12
 **Producto:** Paquete Presencia Digital Pro
-**Precio Base:** $350,000 ARS (pago único o 3 cuotas sin interés)
+**Precio Base:** $350,000 ARS
 
 ---
 
