@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Pages para Hospedajes - Neuracoder</title>
+    <meta name="description" content="Landing pages profesionales para hospedajes turísticos. Capturá consultas directas sin comisiones de Booking o Airbnb.">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Estilos específicos para la calculadora */
+        .calculator-widget {
+            background: var(--bg-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 8px 24px var(--shadow-light);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .calculator-input {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .calculator-input label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-black);
+        }
+
+        .calculator-input input[type="range"] {
+            width: 100%;
+            margin: var(--spacing-xs) 0;
+        }
+
+        .calculator-input input[type="number"] {
+            width: 100%;
+            padding: var(--spacing-sm);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+        }
+
+        .calculator-input select {
+            width: 100%;
+            padding: var(--spacing-sm);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+        }
+
+        .range-value {
+            display: inline-block;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-left: var(--spacing-xs);
+        }
+
+        .calculator-result {
+            background: linear-gradient(135deg, var(--accent-gold), #fbbf24);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-md);
+            margin-top: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .calculator-result h3 {
+            color: var(--text-black);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .big-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-black);
+            margin: var(--spacing-sm) 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            margin: var(--spacing-xl) 0;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .comparison-table th {
+            background: var(--bg-light);
+            font-weight: 700;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--bg-light);
+        }
+
+        .pricing-box {
+            background: var(--bg-white);
+            border: 3px solid var(--accent-gold);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 12px 32px var(--shadow-light);
+            text-align: center;
+            position: relative;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: var(--text-black);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .pricing-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-black);
+            margin: var(--spacing-md) 0;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .pricing-features li {
+            padding: var(--spacing-xs) 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            color: var(--success-green);
+            font-weight: 800;
+            margin-right: var(--spacing-sm);
+            font-size: 1.2rem;
+        }
+
+        .flow-diagram {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: var(--spacing-xl) 0;
+            flex-wrap: wrap;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: var(--spacing-md);
+        }
+
+        .flow-step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gold);
+            color: var(--text-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0 auto var(--spacing-sm);
+        }
+
+        .flow-arrow {
+            font-size: 2rem;
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            .flow-arrow {
+                display: none;
+            }
+
+            .flow-step {
+                min-width: 100%;
+                margin-bottom: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Neuracoder</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../nosotros.html" class="nav-link">Nosotros</a>
+                <a href="../servicios.html" class="nav-link">Servicios</a>
+                <a href="../contacto.html" class="nav-link">Contacto</a>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Dejá de Depender 100% de Booking y Airbnb</h1>
+                <p class="hero-subtitle">Con tu propia landing page profesional, capturás consultas directas por WhatsApp. Sin comisiones. Sin intermediarios.</p>
+                <div class="hero-cta">
+                    <a href="#calculadora" class="btn btn-primary">Calcular Mi Ahorro</a>
+                    <a href="#paquete" class="btn btn-secondary">Ver Paquete</a>
+                </div>
+                <p style="margin-top: 20px; color: rgba(255,255,255,0.9);">
+                    🚀 Online en 3-4 semanas | 💰 Inversión única de $350,000
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora -->
+    <section id="calculadora" style="padding: 60px 0; background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Cuánto Estás Perdiendo en Comisiones?</h2>
+                <p>Calculá cuánto podrías ahorrar con tu propia landing page</p>
+            </div>
+
+            <div class="calculator-widget">
+                <div class="calculator-input">
+                    <label for="unidades">
+                        Cantidad de unidades/habitaciones:
+                        <span class="range-value" id="unidades-value">5</span>
+                    </label>
+                    <input type="range" id="unidades" min="1" max="20" value="5" />
+                </div>
+
+                <div class="calculator-input">
+                    <label for="reservas">
+                        Reservas promedio por mes:
+                        <span class="range-value" id="reservas-value">10</span>
+                    </label>
+                    <input type="range" id="reservas" min="3" max="50" value="10" />
+                </div>
+
+                <div class="calculator-input">
+                    <label for="precio">Precio promedio por noche (en pesos):</label>
+                    <input type="number" id="precio" value="50000" step="1000" />
+                </div>
+
+                <div class="calculator-input">
+                    <label for="plataforma">Plataforma principal:</label>
+                    <select id="plataforma">
+                        <option value="18">Booking (18% comisión)</option>
+                        <option value="15">Airbnb (15% comisión)</option>
+                        <option value="20">Despegar (20% comisión)</option>
+                    </select>
+                </div>
+
+                <div class="calculator-result" id="resultado">
+                    <h3>ESTÁS PERDIENDO:</h3>
+                    <div class="big-number" id="perdida-mensual">$90,000</div>
+                    <p style="font-size: 1.2rem; margin-bottom: 10px;">por mes en comisiones</p>
+                    <div class="big-number" id="perdida-anual" style="font-size: 2rem;">$1,080,000</div>
+                    <p style="font-size: 1rem; margin-bottom: 30px;">por año</p>
+
+                    <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <p style="color: var(--text-black); font-weight: 600; margin-bottom: 10px;">
+                            Si desviás solo el 20% de reservas a tu landing:
+                        </p>
+                        <p style="color: var(--text-black); font-size: 1.5rem; font-weight: 800;">
+                            Ahorrás <span id="ahorro-20" style="color: var(--success-green);">$216,000</span> al año
+                        </p>
+                        <p style="color: var(--text-dark); font-size: 0.95rem; margin-top: 15px;">
+                            Recuperás tu inversión de $350,000 en <span style="font-weight: 700; color: var(--text-black);" id="meses-recuperacion">2 meses</span> ⚡
+                        </p>
+                    </div>
+
+                    <a href="#paquete" class="btn btn-primary" style="margin-top: 30px; background: white; color: var(--accent-gold);">
+                        Quiero Mi Landing →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por Qué Necesitás Presencia Online -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por Qué Necesitás Tu Propia Landing</h2>
+                <p>Dejá de regalar dinero a las plataformas internacionales</p>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="card-icon">💰</div>
+                    <h3>Menos Dependencia de OTAs</h3>
+                    <p>Booking, Airbnb y Despegar se quedan con 15-25% de cada reserva. Cada consulta directa que capturás = 0% comisión.</p>
+                </div>
+
+                <div class="philosophy-card">
+                    <div class="card-icon">🇦🇷</div>
+                    <h3>Mercado Argentino en Pesos</h3>
+                    <p>Muchos argentinos buscan en Google y prefieren consultar por WhatsApp. Tu sitio les habla en su idioma y moneda.</p>
+                </div>
+
+                <div class="philosophy-card">
+                    <div class="card-icon">📱</div>
+                    <h3>Consultas 24/7</h3>
+                    <p>Los clientes te encuentran en cualquier momento. Formulario + WhatsApp siempre disponibles. No perdés más consultas.</p>
+                </div>
+
+                <div class="philosophy-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Respuesta Rápida</h3>
+                    <p>La consulta llega a tu WhatsApp al instante. Respondés rápido = mayor conversión. Control total de la comunicación.</p>
+                </div>
+
+                <div class="philosophy-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Tu Marca, Tu Identidad</h3>
+                    <p>Los clientes conocen TU hospedaje, no "una más de Booking". Construís reputación propia y fidelización.</p>
+                </div>
+
+                <div class="philosophy-card">
+                    <div class="card-icon">📈</div>
+                    <h3>Posicionamiento Google</h3>
+                    <p>Aparecés en búsquedas como "hospedaje en [tu ciudad]". Tráfico orgánico gratis sin pagar publicidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section style="padding: 60px 0; background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Así Captás Consultas Directas</h2>
+                <p>Simple, efectivo y sin complicaciones técnicas</p>
+            </div>
+
+            <div class="flow-diagram">
+                <div class="flow-step">
+                    <div class="flow-step-number">1</div>
+                    <h4>Cliente Busca</h4>
+                    <p>En Google: "hospedaje en Cariló"</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-number">2</div>
+                    <h4>Tu Sitio Aparece</h4>
+                    <p>SEO optimizado para búsquedas locales</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-number">3</div>
+                    <h4>Ve Tu Oferta</h4>
+                    <p>Fotos, descripción, ubicación</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-number">4</div>
+                    <h4>Te Consulta</h4>
+                    <p>WhatsApp directo o formulario</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-number">5</div>
+                    <h4>Cerrás Venta</h4>
+                    <p>Sin comisiones ✅</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: white; border-radius: 12px;">
+                <p style="font-size: 1.1rem; color: var(--text-dark); line-height: 1.8;">
+                    <strong style="color: var(--text-black);">No necesitás sistema de reservas automático para empezar.</strong><br>
+                    La mayoría de los huéspedes prefiere consultar por WhatsApp antes de reservar.<br>
+                    Tu landing les da toda la info y vos cerrás la venta directamente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparación -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Con vs. Sin Tu Propia Landing</h2>
+            </div>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th style="text-align: center;">❌ Sin Sitio Web</th>
+                        <th style="text-align: center; background: #f0fdf4;">✅ Con Tu Landing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Visibilidad</strong></td>
+                        <td style="text-align: center;">Solo Booking/Airbnb</td>
+                        <td style="text-align: center; background: #f0fdf4;">Google + OTAs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comisiones</strong></td>
+                        <td style="text-align: center;">15-25% siempre</td>
+                        <td style="text-align: center; background: #f0fdf4;"><strong>0% en directas</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consultas directas</strong></td>
+                        <td style="text-align: center;">Las perdés</td>
+                        <td style="text-align: center; background: #f0fdf4;">Las capturás</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Precio en pesos</strong></td>
+                        <td style="text-align: center;">Solo USD</td>
+                        <td style="text-align: center; background: #f0fdf4;">Sí ✓</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control de marca</strong></td>
+                        <td style="text-align: center;">Limitado</td>
+                        <td style="text-align: center; background: #f0fdf4;">Total</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inversión inicial</strong></td>
+                        <td style="text-align: center;">$0</td>
+                        <td style="text-align: center; background: #f0fdf4;">$350K (una vez)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Costo mensual</strong></td>
+                        <td style="text-align: center;">~18% de cada reserva</td>
+                        <td style="text-align: center; background: #f0fdf4;">~$8K hosting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Paquete -->
+    <section id="paquete" style="padding: 60px 0; background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Paquete Presencia Digital Pro</h2>
+                <p>Todo lo que necesitás para empezar a captar consultas directas</p>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="pricing-box">
+                    <div class="pricing-badge">PAQUETE COMPLETO</div>
+
+                    <h3 style="margin-top: 30px;">Landing Page Profesional</h3>
+                    <div class="pricing-amount">$350.000</div>
+                    <p style="color: var(--text-dark); margin-bottom: 30px;">
+                        Pago único o en 3 cuotas sin interés
+                    </p>
+
+                    <ul class="pricing-features">
+                        <li>Landing page responsive (adaptada a móviles)</li>
+                        <li>Hasta 5 páginas (Inicio, Unidades, Ubicación, Galería, Contacto)</li>
+                        <li>Formularios de consulta optimizados</li>
+                        <li>Integración WhatsApp Business con botón directo</li>
+                        <li>Galería de fotos profesional optimizada</li>
+                        <li>Google Maps integrado</li>
+                        <li>SEO local optimizado para Google</li>
+                        <li>Dominio .com.ar por 1 año incluido</li>
+                        <li>Hosting profesional por 1 año incluido</li>
+                        <li>Certificado SSL (sitio seguro https://)</li>
+                        <li>Capacitación para actualizar contenido</li>
+                        <li>Soporte técnico por 30 días</li>
+                    </ul>
+
+                    <a href="../contacto.html" class="btn btn-primary btn-full" style="margin-top: 30px;">
+                        Solicitar Mi Landing →
+                    </a>
+
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-dark);">
+                        💳 Mercado Pago | Transferencia<br>
+                        📞 Respondemos en menos de 24hs
+                    </p>
+                </div>
+
+                <!-- Upgrade Opcional -->
+                <div style="margin-top: 40px; padding: 30px; background: white; border-radius: 12px; border: 2px dashed var(--border-light);">
+                    <h4 style="text-align: center; margin-bottom: 15px;">⭐ Upgrade Opcional: Sistema de Reservas</h4>
+                    <p style="text-align: center; color: var(--text-dark); margin-bottom: 20px;">
+                        ¿Querés automatizar el proceso completo?
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0;">• Calendario de disponibilidad online</li>
+                        <li style="padding: 8px 0;">• Pasarela Mercado Pago integrada</li>
+                        <li style="padding: 8px 0;">• Confirmación automática de reservas</li>
+                        <li style="padding: 8px 0;">• Panel de administración</li>
+                    </ul>
+                    <p style="text-align: center; margin-top: 20px; font-weight: 700; color: var(--text-black);">
+                        Precio: +$500,000 ARS
+                    </p>
+                    <p style="text-align: center; font-size: 0.9rem; color: var(--text-dark); margin-top: 10px;">
+                        (Lo podés agregar después de validar que tu landing funciona)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details style="margin-bottom: 20px; padding: 20px; background: var(--bg-light); border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-black);">
+                        ¿Incluye sistema de reservas online?
+                    </summary>
+                    <p style="margin-top: 15px; color: var(--text-dark); line-height: 1.7;">
+                        El paquete base NO incluye sistema de reservas automatizado. Incluye formularios de contacto y botón directo a WhatsApp. Los clientes te consultan, vos respondés y cerrás la reserva directamente. Si después querés automatizar con calendario y pagos online, podemos agregarlo por $500,000 adicionales.
+                    </p>
+                </details>
+
+                <details style="margin-bottom: 20px; padding: 20px; background: var(--bg-light); border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-black);">
+                        ¿Cómo recibo las consultas?
+                    </summary>
+                    <p style="margin-top: 15px; color: var(--text-dark); line-height: 1.7;">
+                        Cuando alguien hace clic en "Consultar Disponibilidad", se abre WhatsApp con un mensaje pre-cargado. También tenés formulario que te llega por email. Ambos son instantáneos y te notifican en tu teléfono.
+                    </p>
+                </details>
+
+                <details style="margin-bottom: 20px; padding: 20px; background: var(--bg-light); border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-black);">
+                        ¿Cuánto tarda en estar online?
+                    </summary>
+                    <p style="margin-top: 15px; color: var(--text-dark); line-height: 1.7;">
+                        Entre 3 y 4 semanas desde que aprobás el diseño. Es mucho más rápido que un desarrollo con reservas automatizadas (2-3 meses).
+                    </p>
+                </details>
+
+                <details style="margin-bottom: 20px; padding: 20px; background: var(--bg-light); border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-black);">
+                        ¿Puedo seguir usando Booking?
+                    </summary>
+                    <p style="margin-top: 15px; color: var(--text-dark); line-height: 1.7;">
+                        ¡Sí! La idea NO es abandonar Booking, sino tener tu propia herramienta para captar consultas directas. Muchos hospedajes mantienen ambas opciones.
+                    </p>
+                </details>
+
+                <details style="margin-bottom: 20px; padding: 20px; background: var(--bg-light); border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-black);">
+                        ¿Necesito conocimientos técnicos?
+                    </summary>
+                    <p style="margin-top: 15px; color: var(--text-dark); line-height: 1.7;">
+                        No. Te capacitamos para que puedas actualizar fotos y texto fácilmente. Es tan simple como usar Instagram.
+                    </p>
+                </details>
+
+                <details style="margin-bottom: 20px; padding: 20px; background: var(--bg-light); border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-black);">
+                        ¿Qué pasa después del primer año de hosting?
+                    </summary>
+                    <p style="margin-top: 15px; color: var(--text-dark); line-height: 1.7;">
+                        El hosting cuesta aproximadamente $8,000 pesos por mes. Podés renovar con nosotros o con otro proveedor (te damos toda la información). El sitio es tuyo.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-charcoal) 100%); text-align: center; color: white;">
+        <div class="container">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">
+                ¿Listo Para Captar Consultas Sin Comisiones?
+            </h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">
+                Empezá a recibir consultas directas en menos de un mes
+            </p>
+            <a href="../contacto.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 50px;">
+                Solicitar Mi Landing Ahora →
+            </a>
+            <p style="margin-top: 30px; opacity: 0.8;">
+                ✉️ info@neuracoder.com
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h3>Neuracoder</h3>
+                        <p>Desarrollamos soluciones que transforman empresas. Landing pages profesionales para hospedajes turísticos.</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../nosotros.html">Nosotros</a></li>
+                        <li><a href="../servicios.html">Servicios</a></li>
+                        <li><a href="../contacto.html">Contacto</a></li>
+                        <li><a href="index.html">Landings para Hospedajes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="index.html">Landing Pages</a></li>
+                        <li><a href="../servicios.html#automation">Python Automation</a></li>
+                        <li><a href="../servicios.html#mvp">MVP Development</a></li>
+                        <li><a href="../servicios.html#rescue">Rescue Mission</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:info@neuracoder.com">info@neuracoder.com</a></li>
+                        <li><a href="https://www.neuracoder.com">www.neuracoder.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neuracoder. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+    <script>
+        // Calculadora interactiva
+        document.addEventListener('DOMContentLoaded', function() {
+            const unidadesInput = document.getElementById('unidades');
+            const reservasInput = document.getElementById('reservas');
+            const precioInput = document.getElementById('precio');
+            const plataformaSelect = document.getElementById('plataforma');
+
+            const unidadesValue = document.getElementById('unidades-value');
+            const reservasValue = document.getElementById('reservas-value');
+
+            function calcular() {
+                const unidades = parseInt(unidadesInput.value);
+                const reservas = parseInt(reservasInput.value);
+                const precio = parseInt(precioInput.value);
+                const comision = parseInt(plataformaSelect.value);
+
+                // Actualizar displays de sliders
+                unidadesValue.textContent = unidades;
+                reservasValue.textContent = reservas;
+
+                // Cálculos
+                const perdidaMensual = reservas * precio * (comision / 100);
+                const perdidaAnual = perdidaMensual * 12;
+                const ahorro20 = perdidaAnual * 0.20;
+                const mesesRecuperacion = Math.ceil(350000 / (ahorro20 / 12));
+
+                // Formatear números
+                document.getElementById('perdida-mensual').textContent =
+                    '$' + perdidaMensual.toLocaleString('es-AR');
+                document.getElementById('perdida-anual').textContent =
+                    '$' + perdidaAnual.toLocaleString('es-AR');
+                document.getElementById('ahorro-20').textContent =
+                    '$' + ahorro20.toLocaleString('es-AR');
+                document.getElementById('meses-recuperacion').textContent =
+                    mesesRecuperacion + ' ' + (mesesRecuperacion === 1 ? 'mes' : 'meses');
+            }
+
+            // Event listeners
+            unidadesInput.addEventListener('input', calcular);
+            reservasInput.addEventListener('input', calcular);
+            precioInput.addEventListener('input', calcular);
+            plataformaSelect.addEventListener('change', calcular);
+
+            // Cálculo inicial
+            calcular();
+        });
+    </script>
+</body>
+</html>
