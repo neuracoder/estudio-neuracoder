@@ -70,13 +70,7 @@
   - Mejor posicionamiento en Google
   - Confianza del usuario
 
-### 6. Capacitación y Soporte
-- ✅ **Capacitación para actualizar contenido**
-  - Cómo cambiar fotos
-  - Cómo editar textos
-  - Cómo actualizar precios
-  - Sesión de 1-2 horas por videollamada
-  - Manual en PDF con capturas
+### 6. Soporte Técnico
 - ✅ **Soporte técnico por 30 días**
   - Respuesta en menos de 24hs
   - Corrección de bugs
@@ -88,7 +82,7 @@
   - Semana 1: Diseño inicial y revisión
   - Semana 2: Desarrollo y carga de contenido
   - Semana 3: Pruebas y ajustes
-  - Semana 4: Lanzamiento y capacitación
+  - Semana 4: Lanzamiento
 
 ---
 
@@ -212,7 +206,7 @@ Si después de validar que tu landing funciona querés automatizar completamente
 | WhatsApp integrado | ✅ | ✅ |
 | SEO optimizado | ✅ | ✅ |
 | Dominio + Hosting 1 año | ✅ | ✅ |
-| Capacitación | ✅ | ✅ |
+| Soporte 30 días | ✅ | ✅ |
 | **Calendario online** | ❌ | ✅ |
 | **Reservas automatizadas** | ❌ | ✅ |
 | **Mercado Pago integrado** | ❌ | ✅ |
@@ -268,9 +262,10 @@ Si después de validar que tu landing funciona querés automatizar completamente
 - **Total anual:** ~$100,000-110,000/año
 
 ### Actualizaciones Post-30 Días
-- **Cambio de fotos/textos simples:** Sin costo si lo hacés vos (te capacitamos)
+- **Cambio de fotos/textos simples:** Consultar costo (actualizaciones las hacemos nosotros)
 - **Cambios de diseño/estructura:** Consultar costo por hora
 - **Nuevas funcionalidades:** Consultar presupuesto específico
+- **Mantenimiento mensual:** Opcional, consultar planes disponibles
 
 ### El Sitio es Tuyo
 - ✅ Código fuente es tuyo
